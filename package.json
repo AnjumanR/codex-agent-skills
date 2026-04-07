@@ -1,0 +1,14 @@
+{
+  "name": "codex-agent-skills",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Harness-agnostic Codex runtime skills for review, adversarial review, rescue, and job control.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "test": "node --test tests/broker-endpoint.test.mjs tests/companion.test.mjs tests/git.test.mjs tests/process.test.mjs tests/render.test.mjs tests/state.test.mjs"
+  }
+}
