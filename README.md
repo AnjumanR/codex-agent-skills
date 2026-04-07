@@ -8,9 +8,9 @@ This repository packages Codex workflows as installable skills via the generic `
 
 ## What You Get
 
-- `codex-review` for a normal read-only Codex review
-- `codex-adversarial-review` for a steerable challenge review
-- `codex-rescue` and `codex-job-control` to delegate work and manage background jobs
+- `review` for a normal read-only Codex review (via `codex-review`)
+- `adversarial-review` for a steerable challenge review (via `codex-adversarial-review`)
+- `task`, `status`, `result`, and `cancel` to delegate work and manage jobs (via `codex-rescue` and `codex-job-control`)
 - helper skills for prompt quality and result handling (`gpt-5-4-prompting`, `codex-result-handling`)
 
 ## Requirements
@@ -44,6 +44,14 @@ Install specific skills only:
 ```bash
 npx -y skills add AnjumanR/codex-agent-skills --skill codex-review codex-adversarial-review
 ```
+
+Then run:
+
+```bash
+node scripts/codex-companion.mjs setup
+```
+
+`setup` tells you whether Codex is ready in the current environment.
 
 ## Runtime Entry Point
 
@@ -135,6 +143,9 @@ This command is read-only. It does not fix code.
 
 Hands a task to Codex for diagnosis, implementation, or follow-up.
 
+> Note:
+> Depending on task size and model choice, rescue runs can take a while. Background mode is generally recommended for open-ended work.
+
 Use it when you want Codex to:
 
 - investigate a bug
@@ -216,6 +227,11 @@ node scripts/codex-companion.mjs setup
 node scripts/codex-companion.mjs setup --enable-review-gate
 node scripts/codex-companion.mjs setup --disable-review-gate
 ```
+
+When review gate is enabled, stop-time checks can run extra review work before completion.
+
+> Warning:
+> Review gate can create long-running loops and consume usage quickly. Enable it only when you plan to monitor the session.
 
 ## Typical Flows
 
