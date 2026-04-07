@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "type": "module",
-  "description": "Harness-agnostic Codex runtime skills for review, adversarial review, rescue, and job control.",
+  "description": "Use Codex from agent harnesses to review code or delegate tasks to Codex.",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=18.18.0"

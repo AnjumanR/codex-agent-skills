@@ -1,6 +1,8 @@
 # Codex Agent Skills
 
-Use Codex from agent harnesses for code review and delegated implementation tasks.
+Use Codex from inside your agent harness for code reviews or to delegate tasks to Codex.
+
+These skills are for users who want an easy way to start using Codex from the workflow they already have.
 
 This repository packages Codex workflows as installable skills via the generic `skills` CLI.
 
