@@ -275,12 +275,6 @@ When a command returns a Codex session ID, you can continue directly in Codex:
 codex resume <session-id>
 ```
 
-## Development
-
-```bash
-npm test
-```
-
 ## License
 
 Apache-2.0. See `LICENSE` and `NOTICE`.
