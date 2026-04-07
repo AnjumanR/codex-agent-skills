@@ -1,6 +1,6 @@
 {
   "name": "codex-agent-skills",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "type": "module",
   "description": "Use Codex from agent harnesses to review code or delegate tasks to Codex.",
